@@ -1,19 +1,19 @@
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
-var cors = require('cors');
-app.use(cors());
-app.use(bodyParser.json());
+// var express = require('express');
+// var app = express();
+// var bodyParser = require('body-parser');
+// var cors = require('cors');
+// app.use(cors());
+// app.use(bodyParser.json());
 
 
-app.post('/',function(req,res){
-   console.log(">>>> "+req.body);
-   res.json('Thank You');
-});
-
-// app.listen(3000,function(){
-//     console.log('Server running at http://127.0.0.1:3000/');
+// app.post('/',function(req,res){
+//    console.log(">>>> "+req.body);
+//    res.json('Thank You');
 // });
+
+// // app.listen(3000,function(){
+// //     console.log('Server running at http://127.0.0.1:3000/');
+// // });
 module.exports = function(bp) {
   bp.middlewares.load();
    bp.hear(/GET_STARTED|hello|hi|test|hey|holla/i, (event, next) => {
