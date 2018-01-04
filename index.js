@@ -15,6 +15,7 @@ app.post('/',function(req,res){
 //     console.log('Server running at http://127.0.0.1:3000/');
 // });
 module.exports = function(bp) {
+  bp.middlewares.load();
    bp.hear(/GET_STARTED|hello|hi|test|hey|holla/i, (event, next) => {
     event.reply('#welcome') // See the file `content.yml` to see the block
   })
